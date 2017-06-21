@@ -1,0 +1,6 @@
+<% @songs.each do |a| %>
+  <div><p><%= "Song Name: #{a.name}" %></p><br>
+    <p><%= "Artist Name: #{a.artist.name}" %></p>
+    <p><%= "Genre: #{a.genre.name}" %></p>
+  </div>
+<% end %>
