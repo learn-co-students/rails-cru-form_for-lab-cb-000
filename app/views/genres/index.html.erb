@@ -1,0 +1,5 @@
+<% if !@genres.empty? %>
+  <% @genres.each do |genre| %>
+    <%= link_to genre.name, genre_path(genre.id) %> <br>
+  <% end %>
+<% end %>
