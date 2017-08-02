@@ -1,0 +1,7 @@
+<%if !@artists.empty? %>
+  <% @artists.each do |artist| %>
+    <%= link_to artist.name , artist_path(artist.id) %> <br>
+  <%end%>
+<% else %>
+Artists list is empty
+<% end %>

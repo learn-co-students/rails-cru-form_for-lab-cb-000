@@ -1,0 +1,19 @@
+<h1><%= @artist.name %> </h1>
+<p><%= @artist.bio %></p><br>
+<% if !@artist.songs.empty? %>
+  <h3>Songs:</h3>
+  <% @artist.songs.each do |song| %>
+  <ul>
+    <li><%= link_to song.name, song_path(song.id) %></li>
+  </ul>
+  <%end%>
+<% end %>
+
+<% if !@artist.genres.empty? %>
+  <h3>Genres:</h3>
+  <% @artist.genres.each do |genre| %>
+  <ul>
+    <li><%= link_to genre.name, genre_path(genre.id) %></li>
+  </ul>
+  <%end%>
+<%end%>

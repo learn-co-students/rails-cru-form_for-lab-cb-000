@@ -1,0 +1,5 @@
+<% if !@songs.empty? %>
+  <% @songs.each do |song| %>
+    <p><%= link_to song.name, song_path(song.id) %></p><br> 
+  <% end %>
+<% end %>
