@@ -30,13 +30,13 @@ describe 'navigate' do
   end
 end
 
-describe 'form' do
+describe 'forms: ' do
   before do
     @artist = Artist.create(name: "My Artist", bio: "My artist bio")
     @genre = Genre.create(name: "My Genre")
   end
 
-  it 'shows a new form that submits content and redirects and prints out params' do
+  it 'create form shows a new form that submits content and redirects and prints out params' do
     visit new_song_path
 
     fill_in 'song[name]', with: "My song name"
@@ -48,7 +48,7 @@ describe 'form' do
     expect(page).to have_content("My song name")
   end
 
-  it 'shows a new form that submits content and redirects and prints out params' do
+  it 'edit form shows a new form that submits content and redirects and prints out params' do
     @song = Song.create(name: "My Song", artist_id: @artist.id, genre_id: @genre.id)
 
     visit edit_song_path(@song)

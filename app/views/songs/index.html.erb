@@ -1,0 +1,10 @@
+<h1>Song#index</h1>
+<% @songs.each do |song| %>
+  <% @artist = Artist.find(song.artist_id) %>
+  <% @genre = Genre.find(song.artist_id) %>
+  <p>
+    <%= song.name %>
+    <%= @artist.name %>
+    <%= @genre.name %>
+  </p>
+<% end %>
