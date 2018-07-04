@@ -1,0 +1,8 @@
+<%= content_tag :h1, "Genre Form" %>
+
+<%= form_for @genre do |g| %>
+<%= label_tag :genre_name, "Genre name:", required: true %>
+<%= g.text_field :name %>
+
+<%= g.submit %>
+<% end %>

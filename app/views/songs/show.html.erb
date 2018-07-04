@@ -1,0 +1,11 @@
+<%= content_tag :h1, @song.name %>
+
+<%= link_to artist_path(@song.artist) do %>
+  <%= content_tag :strong, "Artist:" %>
+  <%= link_to @song.artist.name %>
+<% end %>
+-
+<%= link_to genre_path(@song.genre) do %>
+  <%= content_tag :strong, "Genre:" %>
+  <%= @song.genre.name %>
+<% end %>

@@ -1,0 +1,8 @@
+<%= content_tag :h1, "Edit Artist Form" %>
+
+<%= form_for @artist do |a| %>
+  <%= label_tag :artist_name, "Artist name:", required: true %>
+  <%= a.text_field :name %>
+
+  <%= a.submit %>
+<% end %>

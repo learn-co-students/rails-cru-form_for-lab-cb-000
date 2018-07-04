@@ -1,0 +1,25 @@
+<%= content_tag :h1, "Songs Form" %>
+
+<%= form_for @song do |song| %>
+  <%= label_tag :song_name, "Song name:"%>
+  <%= song.text_field :name, required: true %>
+  <br>
+  <br>
+  <%= content_tag :label, "Select an artist:" %>
+  <% Artist.all.each do |artist| %>
+    <br>
+    <%= song.radio_button :artist_id, artist.id, required: true  %>
+    <%= artist.name %>
+  <% end %>
+  <br>
+  <br>
+  <%= content_tag :label, "Select a genre:" %>
+  <% Genre.all.each do |genre| %>
+    <br>
+    <%= song.radio_button :genre_id, genre.id, required: true  %>
+    <%= genre.name %>
+  <% end %>
+  <br>
+  <br>
+  <%= song.submit %>
+<% end %>
