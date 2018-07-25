@@ -1,0 +1,7 @@
+<h1>Artist Form: <%= @artist.name %></h1>
+
+<p>Bio: <%= @artist.bio %></p>
+
+<%= form_tag edit_artist_path, method: :get do %>
+  <%= submit_tag "Edit artist" %>
+<% end %>
