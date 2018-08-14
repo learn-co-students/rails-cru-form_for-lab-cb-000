@@ -37,13 +37,20 @@ table "artists"
   string   "name"
   text     "bio"
 
+  rails g resource Artists name:string bio:text --no-test-framework
+
 table "genres"
   string   "name"
+
+  rails g resource Genres name:string --no-test-framework
+
 
 table "songs"
   string   "name"
   integer  "artist_id"
   integer  "genre_id"
+
+  rails g resource Songs name:string artist_id:integer genre_id:integer --no-test-framework
 ```
 
 ## Key notes to remember
