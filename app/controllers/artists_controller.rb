@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
 		# display each of the song's genre and artist, 
 		# and link to the respective genre and artist show pages.
 		
-		
+		@artist = Artist.find(params[:id])
 	end
 
 
