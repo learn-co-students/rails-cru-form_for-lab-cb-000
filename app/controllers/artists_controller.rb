@@ -13,11 +13,18 @@ class ArtistsController < ApplicationController
 
 	def create
 
-		# code to inspect / sanitize and save here
+		# @artist = Artist.new(params.require(:artist).permit(:name, :bio))
+		@artist = Artist.new(artist_params)
+		
+		@artist.save
 
 		redirect_to artist_path(@artist)
 	end
 
 
+private 
 
+	def artist_params
+		params.require(:artist).permit(:name, :bio)
+	end
 end
