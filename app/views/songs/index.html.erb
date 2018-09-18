@@ -1,0 +1,10 @@
+<%= content_tag :h1, "Songs" %>
+
+<%= div_for @songs do |song| %>
+  <p>
+  <%= link_to song_path(song) do %>
+    <%= content_tag :strong, song.name %>
+    by <%= song.artist.name %>
+  <% end %>
+  </p>
+<% end %>
