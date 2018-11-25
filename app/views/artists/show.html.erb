@@ -1,0 +1,12 @@
+<h1>My Artist</h1>
+<h1><%= @artist.name %></h1>
+
+<h3>Biography:</h3>
+<p><%= @artist.bio %></p>
+
+<h3>Songs:</h3>
+<ul>
+  <% @artist.songs.each do |song| %>
+    <li><%= link_to song.name, song_path(song)%></li>
+  <% end %>
+</ul>
