@@ -1,0 +1,25 @@
+<h1>Artist Form!</h1>
+
+<%= form_for @artist do |f| %>
+  <%= f.label "Artist:" %>
+  <%= f.text_field "name" %>
+  <br>
+  <%= f.label "Bio:" %>
+  <%= f.text_area "bio" %>
+  <br>
+  <%= f.submit "Create Artist" %>
+<% end %>
+
+<br>
+<br>
+<%= form_tag artists_path, method: "get" do %>
+  <%= submit_tag "List Artists" %>
+<% end %>
+
+<%= form_tag songs_path, method: "get" do %>
+  <%= submit_tag "List Songs" %>
+<% end %>
+
+<%= form_tag genres_path, method: "get" do %>
+  <%= submit_tag "List Genres" %>
+<% end %>

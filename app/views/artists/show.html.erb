@@ -1,0 +1,20 @@
+<h1><%= @artist.name %></h1>
+<p><%= @artist.bio %></p>
+<br>
+<%= form_tag edit_artist_path, method: "get" do %>
+  <%= submit_tag "Edit Artist" %>
+<% end %>
+
+<br>
+<br>
+<%= form_tag artists_path, method: "get" do %>
+  <%= submit_tag "List Artists" %>
+<% end %>
+
+<%= form_tag songs_path, method: "get" do %>
+  <%= submit_tag "List Songs" %>
+<% end %>
+
+<%= form_tag genres_path, method: "get" do %>
+  <%= submit_tag "List Genres" %>
+<% end %>

@@ -1,0 +1,28 @@
+<h1>Add a new Song!</h1>
+
+<%= form_for @song do |f| %>
+  <%= f.label "Song:" %>
+  <%= f.text_field "name" %>
+  <br>
+  <%= f.label "Artist ID:" %>
+  <%= f.text_field "artist_id" %>
+  <br>
+  <%= f.label "Genre ID:" %>
+  <%= f.text_field "genre_id" %>
+  <br>
+  <%= f.submit "Create Song" %>
+<% end %>
+
+<br>
+<br>
+<%= form_tag artists_path, method: "get" do %>
+  <%= submit_tag "List Artists" %>
+<% end %>
+
+<%= form_tag songs_path, method: "get" do %>
+  <%= submit_tag "List Songs" %>
+<% end %>
+
+<%= form_tag genres_path, method: "get" do %>
+  <%= submit_tag "List Genres" %>
+<% end %>

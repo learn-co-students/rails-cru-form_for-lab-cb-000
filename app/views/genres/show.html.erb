@@ -1,0 +1,23 @@
+<h1><%= @genre.name %></h1>
+<p>Songs associated with this genre:</p>
+<ul>
+<% @genre.songs.each do |song| %>
+  <li><%= link_to song.name, song_path(song) %></li>
+<% end %>
+</ul>
+<%= form_tag edit_genre_path(@genre), method: "get" do %>
+  <%= submit_tag "Edit Genre"%>
+<% end %>
+<br>
+<br>
+<%= form_tag artists_path, method: "get" do %>
+  <%= submit_tag "List Artists" %>
+<% end %>
+
+<%= form_tag songs_path, method: "get" do %>
+  <%= submit_tag "List Songs" %>
+<% end %>
+
+<%= form_tag genres_path, method: "get" do %>
+  <%= submit_tag "List Genres" %>
+<% end %>
