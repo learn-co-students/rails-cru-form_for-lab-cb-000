@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# rails g resource Artist name:string bio:text --no-test-framework
+# rails g resource Genre name:string --no-test-framework
+# rails g resource Song artist_id:integer genre_id:integer --no-test-framework
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
