@@ -1,0 +1,13 @@
+<h1>Update Song</h1>
+<%= form_for @song do |a| %>
+  <%= a.label 'Name' %><br>
+  <%= a.text_field :name %><br>
+
+  <%= a.label 'Artist Id' %><br>
+  <%= a.text_field :artist_id %><br>
+
+  <%= a.label 'Genre Id' %><br>
+  <%= a.text_field :genre_id %><br>
+
+  <%= a.submit "Update Genre" %>
+<% end %>
