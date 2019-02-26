@@ -1,0 +1,17 @@
+<h1>List of Artists</h1>
+<% @artist.each do |artist| %>
+  <h3><%= link_to artist.name, artist_path(artist) %></h3>
+<% end %>
+<br>
+
+<%= form_tag new_artist_path, method: "get" do %>
+  <%= submit_tag "Create New Artist" %>
+<% end %>
+
+<%= form_tag songs_path, method: "get" do %>
+  <%= submit_tag "List Songs" %>
+<% end %>
+
+<%= form_tag genres_path, method: "get" do %>
+  <%= submit_tag "List Genres" %>
+<% end %>

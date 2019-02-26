@@ -1,0 +1,22 @@
+<h1>Create A New Genre</h1>
+<%= form_for @genre do |f| %>
+  <%= f.label "Genre:" %>
+  <%= f.text_field "name" %>
+  <br>
+  <%= f.submit "Create Genre" %>
+<% end %>
+
+
+<br>
+<br>
+<%= form_tag artists_path, method: "get" do %>
+  <%= submit_tag "List Artists" %>
+<% end %>
+
+<%= form_tag songs_path, method: "get" do %>
+  <%= submit_tag "List Songs" %>
+<% end %>
+
+<%= form_tag genres_path, method: "get" do %>
+  <%= submit_tag "List Genres" %>
+<% end %>
